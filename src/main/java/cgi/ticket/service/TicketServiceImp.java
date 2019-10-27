@@ -68,9 +68,12 @@ public class TicketServiceImp implements TicketService {
 	public Ticket modifierTicket(Ticket ticket, Long id) throws NotFoundException {
 		if (id == null && ticket == null)
 			throw new NotFoundException("l'identifiant " + id + " ne doit pas etre null");
+		
 		Optional<Ticket> ticketToUpdate = ticketRepository.findById(id);
+		
 		if (!ticketToUpdate.isPresent())
 			throw new NotFoundException("le ticket " + ticketToUpdate.get() + " est intouvable");
+		
 		ticketToUpdate.get().setCriticite(ticket.getCriticite());
 		ticketToUpdate.get().setDateProblematique(ticket.getDateProblematique());
 		ticketToUpdate.get().setNom(ticket.getNom());
