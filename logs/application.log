@@ -1,0 +1,71 @@
+2019-10-27 18:41:05,286 INFO cgi.ticket.GestionTicketApplication [restartedMain] Starting GestionTicketApplication on DESKTOP-T8TL8EH with PID 8088 (started by ASUS ROG in C:\Users\ASUS ROG\eclipse-workspace\GestionTicket)
+2019-10-27 18:41:05,289 INFO cgi.ticket.GestionTicketApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-27 18:41:05,328 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-27 18:41:05,328 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-27 18:41:05,971 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-27 18:41:06,037 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 59ms. Found 1 repository interfaces.
+2019-10-27 18:41:06,339 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$44208993] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-27 18:41:06,619 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 7070 (http)
+2019-10-27 18:41:06,639 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-10-27 18:41:06,639 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-27 18:41:06,750 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-10-27 18:41:06,751 INFO org.springframework.web.context.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 1423 ms
+2019-10-27 18:41:06,891 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-10-27 18:41:07,022 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-10-27 18:41:07,124 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-27 18:41:07,181 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.12.Final}
+2019-10-27 18:41:07,183 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-10-27 18:41:07,291 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-27 18:41:07,416 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-10-27 18:41:07,997 INFO org.hibernate.tool.schema.internal.SchemaCreatorImpl [restartedMain] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@17968e7c'
+2019-10-27 18:41:08,000 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-27 18:41:08,037 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-10-27 18:41:08,526 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-27 18:41:08,562 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-27 18:41:08,745 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 7070 (http) with context path ''
+2019-10-27 18:41:08,747 INFO cgi.ticket.GestionTicketApplication [restartedMain] Started GestionTicketApplication in 3.785 seconds (JVM running for 4.753)
+2019-10-27 18:41:14,376 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7070-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-27 18:41:14,377 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-7070-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-10-27 18:41:14,382 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-7070-exec-1] Completed initialization in 5 ms
+2019-10-27 18:41:14,421 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-1] ---start afficherTicketParId-- {}
+2019-10-27 18:41:14,457 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-1] ---end afficherTicketParId-- {}
+2019-10-27 18:42:49,922 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [Thread-7] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-27 18:42:49,924 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-7] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-27 18:42:49,924 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [Thread-7] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-10-27 18:42:49,931 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown initiated...
+2019-10-27 18:42:50,195 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown completed.
+2019-10-27 18:42:50,689 INFO cgi.ticket.GestionTicketApplication [restartedMain] Starting GestionTicketApplication on DESKTOP-T8TL8EH with PID 8088 (started by ASUS ROG in C:\Users\ASUS ROG\eclipse-workspace\GestionTicket)
+2019-10-27 18:42:50,689 INFO cgi.ticket.GestionTicketApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-10-27 18:42:50,943 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-27 18:42:50,962 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 19ms. Found 1 repository interfaces.
+2019-10-27 18:42:51,009 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$44208993] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-27 18:42:51,106 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 7070 (http)
+2019-10-27 18:42:51,106 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-10-27 18:42:51,106 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-27 18:42:51,146 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-10-27 18:42:51,147 INFO org.springframework.web.context.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 456 ms
+2019-10-27 18:42:51,190 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-10-27 18:42:51,201 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-10-27 18:42:51,211 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-27 18:42:51,225 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-10-27 18:42:51,274 INFO org.hibernate.tool.schema.internal.SchemaCreatorImpl [restartedMain] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@17968e7c'
+2019-10-27 18:42:51,275 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-27 18:42:51,287 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-10-27 18:42:51,395 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-27 18:42:51,401 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-27 18:42:51,482 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 7070 (http) with context path ''
+2019-10-27 18:42:51,483 INFO cgi.ticket.GestionTicketApplication [restartedMain] Started GestionTicketApplication in 0.825 seconds (JVM running for 107.489)
+2019-10-27 18:42:51,486 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2019-10-27 18:49:52,703 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7070-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-27 18:49:52,705 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-7070-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-10-27 18:49:52,717 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-7070-exec-1] Completed initialization in 12 ms
+2019-10-27 18:49:52,727 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-1] ---start afficherTicketParId-- {}
+2019-10-27 18:49:52,732 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-1] ---end afficherTicketParId-- {}
+2019-10-27 18:49:56,087 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-2] ---start afficherTicketParId-- {}
+2019-10-27 18:49:56,088 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-2] ---end afficherTicketParId-- {}
+2019-10-27 18:49:56,600 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-3] ---start afficherTicketParId-- {}
+2019-10-27 18:49:56,601 INFO cgi.ticket.service.TicketServiceImp [http-nio-7070-exec-3] ---end afficherTicketParId-- {}

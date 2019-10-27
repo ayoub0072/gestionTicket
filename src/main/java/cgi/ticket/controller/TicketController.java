@@ -1,9 +1,13 @@
 package cgi.ticket.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import cgi.ticket.entity.Ticket;
 import cgi.ticket.exception.NotFoundException;
@@ -38,6 +43,21 @@ public class TicketController {
 		return new ResponseEntity<>(tickets, HttpStatus.OK);
 	}
 
+	@PostMapping(value = "upload/tickets/{id}")
+	public ResponseEntity<Ticket> uploadTicketParId(@PathVariable Long id,@RequestParam("file") MultipartFile file) throws NotFoundException, IOException {
+		Ticket tickets = ticketServiceImp.uploadTicketParId(id, file);
+		return new ResponseEntity<>(tickets, HttpStatus.OK);
+	}
+	
+	@GetMapping(value = "download/tickets/{id}")
+	public ResponseEntity<byte[]> downloadTicketParId(@PathVariable Long id) throws NotFoundException {
+		Optional<Ticket> tickets = ticketServiceImp.afficherTicketParId(id);
+		Ticket ticket = tickets.get();
+	    return ResponseEntity.ok()
+	          .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + ticket.getFichierNom() + "\"")
+	          .body(ticket.getFichier());
+	}
+	
 	@GetMapping(value = "/tickets/{id}")
 	public ResponseEntity<Ticket> afficherTicketParId(@PathVariable Long id) throws NotFoundException {
 		Optional<Ticket> tickets = ticketServiceImp.afficherTicketParId(id);

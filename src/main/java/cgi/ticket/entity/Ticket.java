@@ -10,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -30,7 +31,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="ticket_tab")
+@Table(name="TICKETS")
 public class Ticket extends Auditable<String>  implements Serializable{
 
 	@Id
@@ -45,6 +46,11 @@ public class Ticket extends Auditable<String>  implements Serializable{
 	
 	@NotNull(message="ce champs est obligatoire")
 	private Integer numero;
+	
+	private String fichierNom;
+	
+	@Lob
+	private byte[] fichier;
 	
 	@NotNull(message="ce champs est obligatoire")
 	private Integer priorete;

@@ -1,11 +1,13 @@
 package cgi.ticket.service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import cgi.ticket.entity.Ticket;
 import cgi.ticket.exception.NotFoundException;
@@ -31,9 +33,11 @@ public class TicketServiceImp implements TicketService {
 
 	@Override
 	public Optional<Ticket> afficherTicketParId(Long id) throws NotFoundException {
+		log.info(String.format("---start afficherTicketParId-- {}", id));
 		Optional<Ticket> ticket = ticketRepository.findById(id);
 		if (!ticket.isPresent())
 			throw new NotFoundException("l'identifiant " + id + " est introvable");
+		log.info(String.format("---end afficherTicketParId-- {}", id));
 		return ticket;
 	}
 
@@ -81,6 +85,18 @@ public class TicketServiceImp implements TicketService {
 		ticketToUpdate.get().setPriorete(ticket.getPriorete());
 		ticketToUpdate.get().setStatut(ticket.getStatut());
 		return ticketRepository.saveAndFlush(ticketToUpdate.get());
+	}
+	
+	@Override
+	public Ticket uploadTicketParId(Long id,MultipartFile file) throws NotFoundException, IOException {
+		Optional<Ticket> ticketID = ticketRepository.findById(id);
+		if (!ticketID.isPresent())
+			throw new NotFoundException("l'identifiant " + id + " est introvable");
+		Ticket ticket =ticketID.get();
+		ticket.setFichierNom(file.getName());
+		ticket.setFichier(file.getBytes());
+		ticketRepository.saveAndFlush(ticket);
+		return ticket;
 	}
 
 }
